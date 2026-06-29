@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบแจ้งรองเท้าหาย</title>
+    <style>
+        body { font-family: 'Sarabun', sans-serif; background-color: #f4f4f9; padding: 20px; }
+        .container { max-width: 500px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        input, select, textarea { width: 100%; padding: 10px; margin: 8px 0 15px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { background-color: #ff5722; color: white; padding: 12px 15px; border: none; border-radius: 4px; cursor: pointer; width: 100%; font-size: 16px; font-weight: bold; }
+        button:hover { background-color: #e64a19; }
+        .header { text-align: center; color: #333; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>👟 แจ้งรองเท้าหาย</h2>
+            <p>กรุณากรอกข้อมูลให้ครบถ้วนเพื่อให้ง่ายต่อการติดตาม</p>
+        </div>
+        
+        <form action="ใส่_URL_ที่นี่" method="POST">
+            <label>ชื่อ-นามสกุล:</label>
+            <input type="text" name="name" required placeholder="ด.ช. / ด.ญ. / นาย / นางสาว">
+            
+            <label>รหัสนักเรียน / ชั้นเรียน:</label>
+            <input type="text" name="student_id" required placeholder="เช่น 12345 / ม.3/2">
+
+            <label>ยี่ห้อ สี และลักษณะเด่น (เช่น นันยาง สีน้ำตาล ไซส์ 40):</label>
+            <textarea name="details" rows="3" required placeholder="อธิบายจุดเด่น เช่น เขียนชื่อไว้ที่พื้นรองเท้า..."></textarea>
+
+            <label>สถานที่ที่คาดว่าหาย / วันเวลา:</label>
+            <input type="text" name="location" required placeholder="เช่น หน้าห้องสมุด วันศุกร์ตอนพักเที่ยง">
+
+            <button type="submit">ส่งข้อมูลแจ้งหาย</button>
+        </form>
+    </div>
+</body>
+</html>
